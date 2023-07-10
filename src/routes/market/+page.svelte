@@ -69,14 +69,14 @@
         <div class="flex flex-col px-2 py-1 space-y-1">
           <div class="font-medium">{Category}</div>
           <div class="flex flex-col pl-2 space-y-0">
-            {#each Options as option}
+            {#each Options as option, index}
               <div class="flex items-center space-x-2">
                 <input
-                  id="check1"
+                  id={`check-${index}-${option}`}
                   type="checkbox"
                   on:click={() => update_filter(Category, option)}
                   class="w-3 h-3"
-                /><label for="check1">{option}</label>
+                /><label for={`check-${index}-${option}`}>{option}</label>
               </div>
             {/each}
           </div>
