@@ -1,7 +1,5 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
-  //   import machines from "../../mock/machines";
-  //   import market_options from "../../mock/market_options";
 
   export let data;
 
