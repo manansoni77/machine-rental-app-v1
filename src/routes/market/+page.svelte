@@ -35,7 +35,7 @@
             (machine) => {
               if (Array.isArray(machine[key as keyof typeof machine])) {
                 return (
-                  value.every((val) =>
+                  value.some((val) =>
                   //@ts-expect-error
                     machine[key as keyof typeof machine].includes(val)
                   ) && machine
