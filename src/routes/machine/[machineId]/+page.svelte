@@ -47,12 +47,14 @@
   }
 
   const downloadContract = async () => {
-    const res = await fetch('https://pub-3bc74d921a6a4be993e38714c4250c3a.r2.dev/manansoni_resume.pdf');
-    const file = await res.blob()
+    const res = await fetch(
+      "https://pub-3bc74d921a6a4be993e38714c4250c3a.r2.dev/machine-rental-contract.pdf"
+    );
+    const file = await res.blob();
     downloadLink.href = URL.createObjectURL(file);
-    downloadLink.download = "machine-rental-contract.pdf"
+    downloadLink.download = "machine-rental-contract.pdf";
     downloadLink.click();
-  }
+  };
 </script>
 
 <div class="px-6 py-2 w-full flex flex-col">
